@@ -1,0 +1,30 @@
+.flex {
+  display: flex;
+}
+
+.relative {
+  position: relative;
+}
+
+.mainTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: 0em;
+}
+
+.subTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+
+.forceNoWrap {
+  white-space: nowrap;
+}
+
+.forceWrap {
+  word-break: break-all;
+  white-space: normal;
+}

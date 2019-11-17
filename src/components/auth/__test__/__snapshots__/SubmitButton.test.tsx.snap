@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dispable button Snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
+    data-testid="submitButton"
+    disabled=""
+    tabindex="-1"
+    type="submit"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      disable button
+      <div
+        class="MuiCircularProgress-root makeStyles-progress-130 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+        role="progressbar"
+        style="width: 20px; height: 20px;"
+      >
+        <svg
+          class="MuiCircularProgress-svg"
+          viewBox="22 22 44 44"
+        >
+          <circle
+            class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+            cx="44"
+            cy="44"
+            fill="none"
+            r="20.2"
+            stroke-width="3.6"
+          />
+        </svg>
+      </div>
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Enable button Snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+    data-testid="submitButton"
+    tabindex="0"
+    type="submit"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      enable button
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
+</DocumentFragment>
+`;
+
+exports[`No children Snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
+    data-testid="submitButton"
+    disabled=""
+    tabindex="-1"
+    type="submit"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      Submit
+      <div
+        class="MuiCircularProgress-root makeStyles-progress-265 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+        role="progressbar"
+        style="width: 20px; height: 20px;"
+      >
+        <svg
+          class="MuiCircularProgress-svg"
+          viewBox="22 22 44 44"
+        >
+          <circle
+            class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+            cx="44"
+            cy="44"
+            fill="none"
+            r="20.2"
+            stroke-width="3.6"
+          />
+        </svg>
+      </div>
+    </span>
+  </button>
+</DocumentFragment>
+`;
