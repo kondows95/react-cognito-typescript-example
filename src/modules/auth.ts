@@ -112,7 +112,7 @@ export const authForgotPasswordSuccess = (email: string) =>  ({
 });
 
 //=============================================================================
-//Operations
+//Async Operations
 //=============================================================================
 type Dispatch = ThunkDispatch<AppState, undefined, AnyAction>;
 
