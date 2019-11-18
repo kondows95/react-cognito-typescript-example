@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { CssBaseline } from '@material-ui/core';
 import theme from '../theme';
 import Header from '../containers/Header';
-import cognito_exports from '../my-cognito-exports';
 import Login from '../containers/Login';
 import { CognitoUser } from '@aws-amplify/auth';
 

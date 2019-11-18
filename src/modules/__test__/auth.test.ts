@@ -91,7 +91,7 @@ it("AUTH_SIGN_IN_SUCCESS", () => {
   const expectedState = {
     ...initialState,
     user: [{email: 'example@gmail.com', password: '12345678'}],
-    authState: null
+    authState: ""
   };
   const inputState = authReducer(initialState, action);
   expect(inputState).toEqual(expectedState);

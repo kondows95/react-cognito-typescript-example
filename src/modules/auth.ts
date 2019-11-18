@@ -3,6 +3,7 @@ import { Auth } from 'aws-amplify';
 import { AppState, AuthState } from './index';
 import { ThunkDispatch } from 'redux-thunk';
 import { AnyAction } from "redux";
+import { CognitoUser } from '@aws-amplify/auth';
 
 const initialState: AuthState = {
   authState: 'signIn',
@@ -46,7 +47,7 @@ export default (state: AuthState = initialState, action: AnyAction): AuthState =
       return {
         ..._getCommonState(state),
         user: action.payload,
-        authState: null,
+        authState: "",
       };
     case 'AUTH_FORGOT_PASSWORD_SUCCESS':
       return {
@@ -59,7 +60,7 @@ export default (state: AuthState = initialState, action: AnyAction): AuthState =
   }
 };
 
-const _getCommonState = (state: any) => ({
+const _getCommonState = (state: AuthState) => ({
   ...state, 
   error: "",
   loading: false,
@@ -78,7 +79,7 @@ export type Actions = ReturnType<
   | typeof authForgotPasswordSuccess
 >
 
-export const fetchAuthedUserSuccess = (user: any) => ({
+export const fetchAuthedUserSuccess = (user: CognitoUser) => ({
   type: 'AUTH_FETCH_AUTHED_USER',
   payload: user
 });
@@ -101,7 +102,7 @@ export const changeAuthState = (value: string) =>  ({
   payload: value
 });
 
-export const authSignInSuccess = (user: any) =>  ({
+export const authSignInSuccess = (user: CognitoUser) =>  ({
   type: 'AUTH_SIGN_IN_SUCCESS',
   payload: user
 });
