@@ -1,7 +1,5 @@
-//import { Dispatch, Reducer } from 'redux';
 import { Auth } from 'aws-amplify';
-import { AppState, AuthState } from './index';
-import { ThunkDispatch } from 'redux-thunk';
+import { AppState, AppDispatch, AuthState } from './index';
 import { AnyAction } from "redux";
 import { CognitoUser } from '@aws-amplify/auth';
 
@@ -115,10 +113,8 @@ export const authForgotPasswordSuccess = (email: string) =>  ({
 //=============================================================================
 //Async Operations
 //=============================================================================
-type Dispatch = ThunkDispatch<AppState, undefined, AnyAction>;
-
 export const refreshToken = () => {
-  return async (dispatch: Dispatch, getState: () => AppState) => {
+  return async (dispatch: AppDispatch, getState: () => AppState) => {
     try {
       const cognitoUser = await Auth.currentAuthenticatedUser();
       const currentSession = await Auth.currentSession();
@@ -134,7 +130,7 @@ export const refreshToken = () => {
 };
 
 export const fetchAuthedUser = () => {
-  return async (dispatch: Dispatch, getState: () => AppState) => {
+  return async (dispatch: AppDispatch, getState: () => AppState) => {
     dispatch(authBeginLoading());
     try {
       const user = await Auth.currentAuthenticatedUser();
@@ -147,7 +143,7 @@ export const fetchAuthedUser = () => {
 };
 
 export const signOut = () => {
-  return async (dispatch: Dispatch, getState: () => AppState) => {
+  return async (dispatch: AppDispatch, getState: () => AppState) => {
     dispatch(authInit());
     try {
       await Auth.signOut();
@@ -161,7 +157,7 @@ export const signOut = () => {
 };
 
 export const signIn = (email: string, password: string) => {
-  return async (dispatch: Dispatch, getState: () => AppState) => {
+  return async (dispatch: AppDispatch, getState: () => AppState) => {
     dispatch(authBeginLoading());
     try {
       const user = await Auth.signIn(email, password);
@@ -174,7 +170,7 @@ export const signIn = (email: string, password: string) => {
 };
 
 export const forgotPassword = (email: string) => {
-  return async (dispatch: Dispatch, getState: () => AppState) => {
+  return async (dispatch: AppDispatch, getState: () => AppState) => {
     dispatch(authBeginLoading());
     try {
       await Auth.forgotPassword(email);
@@ -187,7 +183,7 @@ export const forgotPassword = (email: string) => {
 };
 
 export const forgotPasswordSubmit = (email: string, code: string, password: string) => {
-  return async (dispatch: Dispatch, getState: () => AppState) => {
+  return async (dispatch: AppDispatch, getState: () => AppState) => {
     dispatch(authBeginLoading());
     try {
       await Auth.forgotPasswordSubmit(email, code, password);
