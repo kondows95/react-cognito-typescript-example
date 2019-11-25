@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SignIn from '../../components/auth/SignIn';
-import { AppState, AppDispatch } from '../../modules/index';
+import { AppState, AppDispatch } from '../../types';
 import { changeAuthState, signIn } from '../../modules/auth';
 
 export const mapStateToProps = (state: AppState) => ({

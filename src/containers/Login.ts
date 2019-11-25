@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Login from '../components/Login';
 import { changeAuthState, signOut } from '../modules/auth';
-import { AppState, AppDispatch } from '../modules/index';
+import { AppState, AppDispatch } from '../types';
 
 export const mapStateToProps = (state: AppState) => ({
   authState: state.auth.authState,

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ForgotPassword from '../../components/auth/ForgotPassword';
-import { AppState, AppDispatch } from '../../modules/index';
+import { AppState, AppDispatch } from '../../types';
 import { changeAuthState, forgotPassword } from '../../modules/auth';
 
 export const mapStateToProps = (state: AppState) => ({

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ForgotPasswordSubmit from '../../components/auth/ForgotPasswordSubmit';
-import { AppState, AppDispatch } from '../../modules/index';
+import { AppState, AppDispatch } from '../../types';
 import { changeAuthState, forgotPasswordSubmit } from '../../modules/auth';
 
 export const mapStateToProps = (state: AppState) => ({

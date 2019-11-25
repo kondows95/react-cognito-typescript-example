@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Header from '../components/Header';
-import { AppState, AppDispatch } from '../modules/index';
+import { AppState, AppDispatch } from '../types';
 import { signOut } from '../modules/auth';
 
 export const mapStateToProps = (state: AppState) => ({

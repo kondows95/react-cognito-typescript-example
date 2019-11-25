@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import App from '../components/App';
-import { AppState, AppDispatch } from '../modules/index';
+import { AppState, AppDispatch } from '../types';
 import { fetchAuthedUser,refreshToken } from '../modules/auth';
 
 export const mapStateToProps = (state: AppState) => ({
